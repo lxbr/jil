@@ -4,5 +4,5 @@
          :extra-deps {compliment {:mvn/version "0.3.6"}
                       com.github.lxbr/jil
                       {:git/url "https://github.com/lxbr/jil"
-                       :sha "e3f8f69accbb1a2172a8eee3f68ef96184728281"}}
+                       :sha "11aff9f629959938c2d8981a9822c15d920d29a3"}}
          :jvm-opts ["-Dclojure.server.repl={:port,3450,:accept,clojure.core.server/repl}"]}}}
