@@ -1,8 +1,6 @@
 {:paths ["src"]
- :deps {org.ow2.asm/asm {:mvn/version "6.0"}
-        org.ow2.asm/asm-tree {:mvn/version "6.0"}
-        ;; org.clojure/tools.deps.alpha {:mvn/version "0.5.425"}
-        }
+ :deps {org.ow2.asm/asm {:mvn/version "6.2.1"}
+        org.ow2.asm/asm-tree {:mvn/version "6.2.1"}}
  :aliases
  {:repl {:extra-paths ["dev"]
          :extra-deps {compliment {:mvn/version "0.3.6"}}
