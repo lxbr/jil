@@ -92,21 +92,7 @@
                                               (concat
                                                (.getInterfaces class-reader)
                                                [(.getSuperName class-reader)]))
-                                class-node (org.objectweb.asm.tree.ClassNode.)
-                                tags {1 :utf8
-                                      3 :int
-                                      4 :float
-                                      5 :long
-                                      6 :double
-                                      7 :class
-                                      8 :string
-                                      9 :field
-                                      10 :method
-                                      11 :interface-method
-                                      12 :name-and-type
-                                      15 :method-handle
-                                      16 :method-type
-                                      18 :invoke-dynamic}]
+                                class-node (org.objectweb.asm.tree.ClassNode.)]
                             (.accept class-reader class-node 0)
                             {:name (-> (.getClassName class-reader)
                                        (.replace "/" "."))
