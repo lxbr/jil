@@ -1,8 +1,7 @@
 {:paths ["src"]
  :aliases
- {:repl {:extra-paths ["dev" "target/classes"]
+ {:repl {:extra-paths ["dev" "target/classes" "../../src"]
          :extra-deps {compliment {:mvn/version "0.3.6"}
-                      com.github.lxbr/jil
-                      {:git/url "https://github.com/lxbr/jil"
-                       :sha "11aff9f629959938c2d8981a9822c15d920d29a3"}}
+                      org.ow2.asm/asm {:mvn/version "6.2.1"}
+                      org.ow2.asm/asm-tree {:mvn/version "6.2.1"}}
          :jvm-opts ["-Dclojure.server.repl={:port,3450,:accept,clojure.core.server/repl}"]}}}
