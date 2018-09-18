@@ -1,14 +1,15 @@
 (ns user
   (:require [clojure.main]
             [com.github.lxbr.jil :as jil]
-            [compliment.core])
-  (:import com.github.lxbr.calc.PostfixCalc))
+            [compliment.core]))
 
 ;; 10 LOAD   Java source code
 ;; 20 EVAL   Java source code
 ;; 30 CHANGE Java source code
 ;; GOTO 10
 (jil/load-dir "src")
+
+(import com.github.lxbr.calc.PostfixCalc)
 
 (comment
   
