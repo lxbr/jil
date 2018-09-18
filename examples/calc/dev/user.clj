@@ -4,13 +4,13 @@
             [compliment.core])
   (:import com.github.lxbr.calc.PostfixCalc))
 
-(comment
+;; 10 LOAD   Java source code
+;; 20 EVAL   Java source code
+;; 30 CHANGE Java source code
+;; GOTO 10
+(jil/load-dir "src")
 
-  ;; 10 LOAD   Java source code
-  ;; 20 EVAL   Java source code
-  ;; 30 CHANGE Java source code
-  ;; GOTO 10
-  (jil/load-dir "src")
+(comment
   
   (PostfixCalc/eval "1 2 +")
 
