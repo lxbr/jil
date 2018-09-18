@@ -1,0 +1,9 @@
+{:paths ["src"]
+ :deps {org.ow2.asm/asm {:mvn/version "6.0"}
+        org.ow2.asm/asm-tree {:mvn/version "6.0"}
+        ;; org.clojure/tools.deps.alpha {:mvn/version "0.5.425"}
+        }
+ :aliases
+ {:repl {:extra-paths ["dev"]
+         :extra-deps {compliment {:mvn/version "0.3.6"}}
+         :jvm-opts ["-Dclojure.server.repl={:port,3450,:accept,clojure.core.server/repl}"]}}}

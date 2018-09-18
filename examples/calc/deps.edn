@@ -1,0 +1,8 @@
+{:paths ["src"]
+ :aliases
+ {:repl {:extra-paths ["dev" "target/classes"]
+         :extra-deps {compliment {:mvn/version "0.3.6"}
+                      com.github.lxbr/jil
+                      {:git/url "todo"
+                       :sha "todo"}}
+         :jvm-opts ["-Dclojure.server.repl={:port,3450,:accept,clojure.core.server/repl}"]}}}
