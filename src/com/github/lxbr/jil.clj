@@ -4,6 +4,7 @@
             [clojure.pprint])
   (:import java.io.ByteArrayOutputStream
            org.objectweb.asm.ClassReader
+           java.io.File
            (javax.tools DiagnosticCollector
                         ForwardingJavaFileManager
                         JavaFileObject$Kind
@@ -135,7 +136,8 @@
 
 (defn write-class-file
   [^String class-name bytes]
-  (let [file-name (str "target/classes/" (.replace class-name "." "/") ".class")
+  (let [compile-path (or *compile-path* "classes")
+        file-name (str compile-path File/separator (.replace class-name "." "/") ".class")
         class-file (io/file file-name)]
     (io/make-parents class-file)
     (io/copy bytes class-file)))
